@@ -10,8 +10,7 @@ const tableColumns = [
     'name VARCHAR(100)',
     'concept VARCHAR(255)',
     'total INT(255)',
-    'paydate TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
-    'status TINYINT DEFAULT 0'
+    'paydate TIMESTAMP DEFAULT CURRENT_TIMESTAMP'
 ];
 
 async function MessageInitializeSchema() {
