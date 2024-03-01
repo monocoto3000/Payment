@@ -5,6 +5,7 @@ export class Payment {
       readonly concept: string,
       readonly total: number,
       readonly paydate: string,
+      readonly status: number
     ) {}
   }
   

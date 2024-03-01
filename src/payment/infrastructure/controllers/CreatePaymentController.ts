@@ -22,7 +22,8 @@ export class CreatePaymentController {
             username: Payment?.name,
             content: Payment?.concept,
             total: Payment?.total,
-            date: Payment?.paydate
+            date: Payment?.paydate,
+            status: Payment?.status
           },
         });
       } else {

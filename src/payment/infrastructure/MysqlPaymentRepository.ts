@@ -15,7 +15,8 @@ export class MysqlPaymentRepository implements PaymentRepository {
             Payment.name,
             Payment.concept,
             Payment.total,
-            Payment.paydate
+            Payment.paydate,
+            Payment.status
           )
       );
     } catch (error) {
@@ -34,7 +35,7 @@ export class MysqlPaymentRepository implements PaymentRepository {
     const params: any[] = [name, concept, total];
     try {
       const [result]: any = await query(sql, params);
-      return new Payment(result.insertId, name, concept, total, Date.toString());
+      return new Payment(result.insertId, name, concept, total, Date.toString(), 0);
     } catch (error) {
       return null;
     }
