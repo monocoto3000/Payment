@@ -18,11 +18,9 @@ export class CreatePaymentController {
         res.status(201).send({
           status: "success",
           data: {
-            id: Payment?.id,
             username: Payment?.name,
             content: Payment?.concept,
             total: Payment?.total,
-            date: Payment?.paydate
           },
         });
       } else {

@@ -14,6 +14,6 @@ export class PaymentRepositoryImpl implements PaymentRepository {
     concept: string,
     total: number
   ): Promise<Payment | null> {
-    return new Payment(1, name, concept, total, new Date().toISOString());
+    return new Payment(name, concept, total);
   }
 }

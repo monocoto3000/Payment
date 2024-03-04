@@ -1,4 +1,5 @@
 import express from "express";
+import cors from 'cors';
 import { Signale } from "signale";
 
 import { PaymentRouter } from "./payment/infrastructure/PaymentRouter";
@@ -9,6 +10,7 @@ app.disable("x-powered-by");
 const signale = new Signale();
 
 app.use(express.json());
+app.use(cors())
 app.use("/payment", PaymentRouter);
 
 app.listen(3000, () => {
